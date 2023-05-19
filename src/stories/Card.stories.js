@@ -13,10 +13,5 @@ export default {
 export const Vertical = {
   args: {
     orientation: 'vertical',
-    subtitle: false,
-    button: false,
-    media: false,
-    subcontent: false,
-    invert: false
   },
 };
