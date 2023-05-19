@@ -1,0 +1,88 @@
+:root {
+    --sia-blue: #002569;
+    --secondary-700: #3B7FD2;
+    --neutral-50: #FBFBFB;
+    --neutral-400: #C3C3C3;
+    --neutral-500: #A5A5A5;
+    --neutral-600: #7B7B7B;
+    --neutral-800: #484848;
+    --neutral-700: #676767;
+    --base-font-size: 16px;
+    --icon-font-size: 24px;
+    --regular-font-weight: 400;
+    --semibold-font-weight: 600;
+    font-family: 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.storybook-button {
+    font-family: inherit;
+    color: var(--neutral-50);
+    border: 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: var(--base-font-size);
+    font-weight: var(--regular-font-weight);
+    cursor: pointer;
+    line-height: calc(1.5 * var(--base-font-size));
+    padding: 8px 16px;    
+}
+
+.storybook-button:hover {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.storybook-button:active {
+    font-weight: var(--semibold-font-weight);
+}
+
+.button-userIcon {
+    font-size: var(--icon-font-size);
+    padding-right: 8px;
+     /* other side paddings handled by button */
+}
+
+.si-cross {
+    background-image: url('./assets/icons/si-home.svg');
+  
+}
+
+.si{
+    display: inline-block;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    height: 1.5em;
+    width: 1.5em;
+    background: no-repeat;
+    vertical-align: middle;
+}
+
+.storybook-button-rounded {
+    border-radius: 100px;
+}
+
+.primary {
+    background-color: var(--sia-blue);
+}
+
+.secondary {
+    background-color: var(--secondary-700);
+}
+
+.tertiary {
+    background-color: transparent;
+    color: var(--sia-blue);
+    border: 1px solid var(--sia-blue);
+}
+
+.disabled-class {
+    background-color: var(--neutral-400);
+    color: var(--neutral-500);
+    pointer-events: none;
+}
+
+.disabled-class.tertiary {
+    background-color: transparent;
+    border-color: var(--neutral-400);
+}

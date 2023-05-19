@@ -1,0 +1,149 @@
+:root {
+    --warning-700: #DF000C;
+    --warning-100: #FFC9CC;
+    --sia-blue: #002569;
+    --neutral-700: #676767;
+    --neutral-600: #7B7B7B;
+    --neutral-500: #A5A5A5;
+    --neutral-300: #E6E6E6;
+    --neutral-100: #F6F6F6;
+    font-family: 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.storybook-textinput {
+    display: flex;
+    align-items: center;
+    padding: 16px 0px;
+    max-width: fit-content;
+    min-width: 300px;
+}
+
+.storybook-textinput-outlined {
+    border: 0.5px solid var(--neutral-600);
+    transition: border-color 0.2s;
+}
+
+.storybook-textinput-lined {
+    border-bottom: 0.5px solid var(--neutral-600);
+    transition: border-color 0.2s;
+}
+
+.storybook-textinput-filled {
+    background-color: var(--neutral-100);
+}
+
+/* change border colour when active */
+.storybook-textinput-outlined:focus-within,
+.storybook-textinput-lined:focus-within {
+    border-color: var(--sia-blue);
+}
+
+.storybook-textinput-outlined:hover,
+.storybook-textinput-filled:hover {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* change container background for filled error */
+.storybook-textinput-filled.error-class {
+    background-color: var(--warning-100);
+}
+
+.error-class,
+.error-class:focus-within {
+    border-color: var(--warning-700);
+}
+
+/* use , to select multiple siblings */
+.error-class ~ .text-below,
+.error-class > .userIcon,
+.error-class > .crossIcon {
+    color: var(--warning-700);
+}
+
+.disabled-class {
+    pointer-events: none;
+}
+
+.disabled-class.storybook-textinput-filled {
+    background: var(--neutral-300);
+}
+
+.text-below {
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--neutral-700);
+}
+
+.text-below {
+    line-height: 18px;
+}
+
+.userIcon, .crossIcon {
+    font-size: 24px;
+    color: var(--neutral-600);
+}
+
+.userIcon {
+    margin-left: 16px;
+}
+
+.crossIcon {
+    margin-left: auto;
+    margin-right: 16px;
+    cursor: pointer;
+    color: teal;
+}
+
+.form-group {
+    position: relative;
+    padding: 16px 0 0;
+    margin: 0 16px;
+}
+  
+.form-input {
+    /* font-family: inherit; */
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #d2d2d2;
+    outline: 0;
+    font-size: 16px;
+    color: #212121;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+.form-input::placeholder {
+    color: transparent;
+}
+
+.form-input {
+    all: unset;
+}
+
+.form-input:placeholder-shown ~ .form-label {
+    font-size: 16px;
+    cursor: text;
+    top: 8px; /* position of Label placeholder */
+}
+
+label,
+.form-input:focus ~ .form-label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 12px;
+    color: #9b9b9b;
+}
+
+
+.form-input:focus ~ .form-label {
+    color: var(--sia-blue);
+}
+
+/* changes label colour to red when there is text [ > is for children ] */
+/* this only selects form-label (sibling of form-input) */
+.error-class > .form-group > .form-input ~ .form-label {
+    color: var(--warning-700);
+}
