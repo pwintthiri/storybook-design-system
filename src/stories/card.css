@@ -29,7 +29,7 @@
 
 .card-header {
     display: grid;
-    grid-template-columns: 75% 25%;
+    grid-template-columns: 3fr 1fr;
     font-size: var(--large-font-size);
     font-weight: var(--semibold-font-weight);
     line-height: calc(1.5 * var(--large-font-size));
@@ -39,7 +39,6 @@
 
 .storybook-card-text {
     padding: 16px 24px;
-    /* overflow-wrap: break-word; */
 }
 
 .card-content {
@@ -71,7 +70,7 @@
 
 .horizontal.storybook-card.with-media {
     display: grid;
-    grid-template-columns: 25% 75%;
+    grid-template-columns: 1fr 3fr;
     /* max-width: 1154px; */
 }
 

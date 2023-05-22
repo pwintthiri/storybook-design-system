@@ -58,6 +58,8 @@ export const TextInput = ({ type, disabled, helpText, leadIcon, trailingIcon, er
       
         {/* render this div only if helpText is true  */}
         { helpText ? (<div className="text-below">Supporting text / Error message</div>) : null}
+        {console.log("error: ", error)}
+        {console.log("disabled: ", disabled)}
         
     </div>
   );
