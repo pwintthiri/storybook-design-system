@@ -17,14 +17,25 @@ export const Card = ({ orientation, content, titleText, subtitleText, button, bu
     mode = 'inverted-class';
   }
 
+  let media;
+  if (mediaURL) {
+    media = 'with-media';
+  }
+
   return (
-    <div className={["storybook-card", mode, orientation].join(' ')}>
-        {/* {mediaURL &&  */}
-        {/* <div className="card-img"> */}
-            {/* <img src={mediaURL} alt="Card Image"></img> */}
-        {/* </div> */}
-        {/* } */}
-        {mediaURL && <img class="card-img" src={mediaURL} alt="Card Image"></img>}
+    <div className={["storybook-card", mode, orientation, media].join(' ')}>
+        {mediaURL && 
+        <div
+        className="card-img"
+        style={{
+          backgroundImage:
+            `url('${mediaURL}'`,
+        }}
+      >
+      </div>
+        }
+
+        {/* {mediaURL && <img class="card-img" src={mediaURL} alt="Card Image"></img>} */}
         <div className="storybook-card-text">
 
             <div className="card-header">

@@ -24,17 +24,6 @@
     overflow: hidden;
 }
 
-.vertical.storybook-card {
-    /* max-width: 400px; */
-}
-
-.vertical .card-img {
-    display: grid;
-    width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-}
-
 .card-header {
     display: grid;
     grid-template-columns: 75% 25%;
@@ -71,41 +60,24 @@
     color: var(--secondary-300);
 }
 
-.horizontal.storybook-card {
-    /* display: flex; */
+.vertical.storybook-card.with-media {
     display: grid;
-    grid-template-columns: auto 1fr;
-    /* grid-auto-rows: 200px; */
-    /* grid-auto-rows: minmax(200px, auto); */
-    max-width: 1154px;
+    grid-template-rows: 1.5fr 1fr;
 }
 
-.horizontal > .card-img {
-    max-width: 232px;
-    background-color: burlywood;
+.horizontal.storybook-card.with-media {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    /* max-width: 1154px; */
+}
 
-    /* object-fit: contain; */
-    /* width: 100%; */
-    /* max-height: 100%; */
-    /* max-width: 232px; */
-    /* height: 100%; */
-    /* background-size: cover; */
-  /* background-position: center; */
-    background-image: url('https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg');
+.card-img {
+    /* background-image: url('https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg'); */
     background-size: cover;
     background-repeat: repeat;
     background-position: center;
     width: 100%;
-  height: 100%;
-  /* max-width: 232px; */
-}
-
-.horizontal img {
-    object-fit: cover;
-    width: 100%;
     height: 100%;
-    max-width: 232px;
-
 }
 
 .horizontal > .storybook-card-text > .action-btn {
@@ -113,14 +85,9 @@
     float: right;
 }
 
-.horizontal > .storybook-card-text {
-    /* flex: 1; */
-}
-
 .star-container {
     /* background: linear-gradient(180deg, #605DEC 0%, #2A26D9 100%); */
     color: pink;
-    /* color: linear-gradient(180deg, #605DEC 0%, #2A26D9 100%); */
     margin-top: 8px;
 }
 
