@@ -21,9 +21,11 @@ export const TextInput = ({ type, disabled, helpText, leadIcon, trailingIcon, er
   let changeClass;
   if (error) {
     changeClass = "error-class";
-  } else if (disabled) {
+  }
+  if (disabled) {
     changeClass = "disabled-class";
   }
+
 
   const [inputValue, setInputValue] = useState('');
 
@@ -49,7 +51,7 @@ export const TextInput = ({ type, disabled, helpText, leadIcon, trailingIcon, er
         </div>) : null}
 
         {/* {trailingIcon ? (<div className="crossIcon" onClick={clearText}>
-         <FaUser/>
+         <FaTimes/>
         </div>) : null} */}
       </div>
       

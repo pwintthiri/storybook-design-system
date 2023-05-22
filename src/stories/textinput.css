@@ -11,11 +11,12 @@
 }
 
 .storybook-textinput {
-    display: flex;
+    display: grid;
     align-items: center;
     padding: 16px 0px;
     max-width: fit-content;
     min-width: 300px;
+    grid-template-columns: auto auto auto;
 }
 
 .storybook-textinput-outlined {

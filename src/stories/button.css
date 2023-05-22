@@ -19,6 +19,7 @@
     color: var(--neutral-50);
     border: 0;
     display: grid;
+    align-items: center;
     grid-template-columns: auto 1fr;
     text-align: center;
     font-size: var(--base-font-size);
