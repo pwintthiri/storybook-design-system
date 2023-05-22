@@ -19,9 +19,12 @@
 
 .storybook-card {
     box-shadow: 0px 12px 24px rgba(34, 34, 34, 0.12);
-    border-radius: 8px;
     color: var(--neutral-800);
     overflow: hidden;
+}
+
+.vertical.storybook-card {
+    border-radius: 8px;
 }
 
 .card-header {
@@ -36,6 +39,7 @@
 
 .storybook-card-text {
     padding: 16px 24px;
+    /* overflow-wrap: break-word; */
 }
 
 .card-content {
