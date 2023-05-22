@@ -18,8 +18,8 @@
     font-family: inherit;
     color: var(--neutral-50);
     border: 0;
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: auto 1fr;
     text-align: center;
     font-size: var(--base-font-size);
     font-weight: var(--regular-font-weight);
@@ -38,8 +38,7 @@
 
 .button-userIcon {
     font-size: var(--icon-font-size);
-    padding-right: 8px;
-     /* other side paddings handled by button */
+    padding-right: 8px; /* other sides handled by text */
 }
 
 .si-cross {

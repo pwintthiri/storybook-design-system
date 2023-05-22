@@ -23,13 +23,13 @@ export const Button = ({ rounded, type, label, icon, disabled, ...props }) => {
       className={["storybook-button", border, mode, `${type}`].join(' ')}
       {...props}
     >
-        {icon ? <div className="button-userIcon">
+        {/* {icon ? <div className="button-userIcon">
             <i class="si si-cross"></i>
-        </div> : null}
-{/* 
+        </div> : null} */}
+
         {icon ? <div className="button-userIcon">
             <FaUser />
-        </div> : null} */}
+        </div> : null}
         {label}
         
     </button>
