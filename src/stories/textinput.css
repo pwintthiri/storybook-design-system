@@ -1,4 +1,12 @@
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/proximanova-regular.otf'),
+    url('../fonts//proximanova-semibold.otf'),
+    url('../fonts/sigvar_serial-regular.otf');
+}
+
 :root {
+    font-family: 'Proxima Nova';
     --warning-700: #DF000C;
     --warning-100: #FFC9CC;
     --sia-blue: #002569;
@@ -7,7 +15,8 @@
     --neutral-500: #A5A5A5;
     --neutral-300: #E6E6E6;
     --neutral-100: #F6F6F6;
-    font-family: 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --regular-font-weight: 400;
+    --semibold-font-weight: 600;
 }
 
 .storybook-textinput {
@@ -70,7 +79,7 @@
 }
 
 .text-below {
-    font-weight: 400;
+    font-weight: var(--regular-font-weight);
     font-size: 12px;
     color: var(--neutral-700);
 }

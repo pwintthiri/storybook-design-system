@@ -1,4 +1,12 @@
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/proximanova-regular.otf'),
+    url('../fonts//proximanova-semibold.otf'),
+    url('../fonts/sigvar_serial-regular.otf');
+}
+
 :root {
+    font-family: 'Proxima Nova';
     --sia-blue: #002569;
     --secondary-700: #3B7FD2;
     --neutral-50: #FBFBFB;
@@ -11,7 +19,6 @@
     --icon-font-size: 24px;
     --regular-font-weight: 400;
     --semibold-font-weight: 600;
-    font-family: 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .storybook-button {
