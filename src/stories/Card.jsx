@@ -9,26 +9,40 @@ import { FaStar, FaRegStar } from 'react-icons/fa';
 /**
  * Primary UI component for user interaction
  */
-export const Card = ({ orientation, titleText, subtitle, subtitleText, button, buttonText, media, mediaURL, subcontent, inverted, ...props }) => {
+export const Card = ({ orientation, content, titleText, subtitleText, button, buttonText, mediaURL, subcontent, inverted, rating, ...props }) => {
+  const MAX_RATING = 5;
+
   let mode;
   if (inverted) {
     mode = 'inverted-class';
   }
+
   return (
     <div className={["storybook-card", mode, orientation].join(' ')}>
+        {/* {mediaURL &&  */}
+        {/* <div className="card-img"> */}
+            {/* <img src={mediaURL} alt="Card Image"></img> */}
+        {/* </div> */}
+        {/* } */}
         {mediaURL && <img class="card-img" src={mediaURL} alt="Card Image"></img>}
         <div className="storybook-card-text">
 
             <div className="card-header">
-                {titleText}
-                {subtitle && <div className="card-subtitle">{subtitleText}</div>}
+                <div className="card-title">{titleText}</div>
+                <div className="card-subtitle">{subtitleText}</div>
             </div>
-            {/* <FaStar/><FaRegStar/> */}
-        
 
+            {orientation === 'horizontal' && rating &&
+            <div className="star-container">
+                {[...Array(MAX_RATING)].map((_, index) => (
+                index < rating ? 
+                (<FaStar key={index} className="star" />) : 
+                (<FaRegStar key={index} className="star" />)))}
+            </div>
+            }
 
-            <div className="card-content">Card description goes here Card description goes hereCard description goes hereCard description goes hereCard description goes hereCard description goes here Card description goes hereCard description goes hereCard description goes hereCard description goes here</div>
-            {subcontent && <div className="card-content separator">Card description goes here Card description goes hereCard description goes hereCard description goes hereCard description goes hereCard description goes here Card description goes hereCard description goes hereCard description goes hereCard description goes here</div>}
+            <div className="card-content">{content}</div>
+            {subcontent && <div className="card-content separator">{subcontent}</div>}
             {button && <div className="action-btn">
                 <Button label={buttonText} onClick={() => {}} rounded type="secondary"/>
             </div>}
@@ -48,15 +62,11 @@ Card.propTypes = {
     /**
      * Text to be written in the title
      */
-    titleText: PropTypes.string.isRequired,
-    /**
-     * Whether there is a subtitle in the card
-     */
-    subtitle: PropTypes.bool,
+    titleText: PropTypes.string,
     /**
      * Text to be written in the subtitle
      */
-    subtitleText: PropTypes.string.isRequired,
+    subtitleText: PropTypes.string,
     /**
      * Whether there is a button in the card
      */
@@ -66,17 +76,21 @@ Card.propTypes = {
      */
     buttonText: PropTypes.string,
     /**
-     * Whether there is media in the card
-    */
-    media: PropTypes.bool,
-    /**
      * URL for media to be displayed in card
     */
     mediaURL: PropTypes.string,
     /**
-     * Whether there is subcontent in the card
+     * Text to be written in the subtitle
      */
-    subcontent: PropTypes.bool,
+    content: PropTypes.string,
+    /**
+     * Text for subcontent
+     */
+    subcontent: PropTypes.string,
+    /**
+     * Number of stars given for the review
+     */
+    rating: PropTypes.string,
     /**
      * Whether colours are inverted
      */
@@ -90,30 +104,12 @@ Card.propTypes = {
 Card.defaultProps = {
     orientation: 'vertical',
     titleText: 'Add title',
-    subtitle: false,
-    subtitleText: 'Add Subtitle',
+    subtitleText: '',
+    content: 'Add content here',
+    subcontent: '',
     button: false,
     buttonText: 'Insert text',
-    media: false,
     mediaURL: '',
-    subcontent: false,
+    rating: '',
     invert: false
 };
-
-
-
-// <div className={["storybook-card", mode].join(' ')}>
-//         <div className="storybook-card-text">
-            
-//         </div>
-//         <div className="card-header">
-//             <div className="card-title">{titleText}</div>
-//             {subtitle && <div className="card-subtitle">{subtitleText}</div>}
-//         </div>
-//         <div className="card-content">Card description goes here Card description goes hereCard description goes hereCard description goes hereCard description goes hereCard description goes here Card description goes hereCard description goes hereCard description goes hereCard description goes here</div>
-    
-//         {subcontent && <div className="card-content separator">Card description goes here Card description goes hereCard description goes hereCard description goes hereCard description goes hereCard description goes here Card description goes hereCard description goes hereCard description goes hereCard description goes here</div>}
-//         {button && <div className="action-btn">
-//             <Button label="More" onClick={() => {}} rounded type="secondary"/>
-//         </div>}
-//     </div>

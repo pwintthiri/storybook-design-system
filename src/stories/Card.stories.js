@@ -15,3 +15,9 @@ export const Vertical = {
     orientation: 'vertical',
   },
 };
+
+export const Horizontal = {
+  args: {
+    orientation: 'horizontal',
+  },
+};
