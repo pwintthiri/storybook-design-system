@@ -7,7 +7,7 @@ import './textinput.css';
 /**
  * Primary UI component for user interaction
  */
-export const TextInput = ({ type, disabled, helpText, leadIcon, trailingIcon, error, ...props }) => {
+export const TextInput = ({ type, labelText, disabled, helpText, leadIcon, trailingIcon, error, ...props }) => {
   let mode;
   if (type === "outlined") {
     mode = "storybook-textinput-outlined";
@@ -38,12 +38,14 @@ export const TextInput = ({ type, disabled, helpText, leadIcon, trailingIcon, er
   }
 
   return (
-    <div className="container">
-      <div className={["storybook-textinput", mode, changeClass].join(' ')}>
+    <div className="storybook-textinput">
+      {/* <div className={["storybook-textinput", mode, changeClass].join(' ')}> */}
+      <div className={[ mode, changeClass].join(' ')}>
+
       {leadIcon ? (<div className="userIcon"><FaUser/></div>) : null}
-        <div className="form-group">
+        <div className="input-wrapper">
           <input type="text" id="entered-text" className="form-input" placeholder='Label' value={inputValue} onChange={updateInput} {...props}/>
-          <label htmlFor="entered-text" className="form-label">Label</label>
+          <label htmlFor="entered-text" className="form-label">{ labelText }</label>
         </div>
 
         {trailingIcon ? (<div className="crossIcon" onClick={clearText}>
@@ -57,7 +59,7 @@ export const TextInput = ({ type, disabled, helpText, leadIcon, trailingIcon, er
       
       
         {/* render this div only if helpText is true  */}
-        { helpText ? (<div className="text-below">Supporting text / Error message</div>) : null}
+        { helpText ? (<div className="text-below">{helpText}</div>) : null}
         {console.log("error: ", error)}
         {console.log("disabled: ", disabled)}
         
@@ -72,13 +74,17 @@ TextInput.propTypes = {
    */
   type: PropTypes.oneOf(['outlined', 'lined', 'filled']),
   /**
+   * Text to be shown in place of Label
+   */
+  labelText: PropTypes.string,
+  /**
    * Whether the textbox is in disabled state
    */
   disabled: PropTypes.bool,
   /**
-   * Whether there is Supporting text / Error message
+   * Supporting text to appear below text box
    */
-  helpText: PropTypes.bool,
+  helpText: PropTypes.string,
   /**
    * Whether there is a lead icon
    */
@@ -95,8 +101,9 @@ TextInput.propTypes = {
 
 TextInput.defaultProps = {
   type: 'outlined',
+  labelText: '',
   disabled: false,
-  helpText: false,
+  helpText: '',
   leadIcon: false,
   trailingIcon: false,
   error: false

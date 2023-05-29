@@ -8,6 +8,7 @@ export default {
   tags: ['autodocs'], // this story is generated automatically by Storybook's Docs addon.
   argTypes: {
     type: { control: { type: 'select', options: ['Outlined', 'Lined', 'Filled'] } },
+    // labelText: { control: { type: 'text' } },
   },
 };
 
@@ -15,29 +16,17 @@ export default {
 export const Outlined = {
   args: {
     type: 'outlined',
-    helpText: false,
-    leadIcon: false,
-    trailingIcon: false,
-    error: false,
   },
 };
 
 export const Lined = {
   args: {
     type: 'lined',
-    helpText: false,
-    leadIcon: false,
-    trailingIcon: false,
-    error: false,
   },
 };
 
 export const Filled = {
   args: {
     type: 'filled',
-    helpText: false,
-    leadIcon: false,
-    trailingIcon: false,
-    error: false,
   },
 };

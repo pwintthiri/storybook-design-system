@@ -17,6 +17,7 @@
     --neutral-600: #7B7B7B;
     --neutral-800: #484848;
     --neutral-700: #676767;
+    --white-bg: #FFFFFF;
     --base-font-size: 16px;
     --large-font-size: 24px;
     --icon-font-size: 24px;
@@ -26,6 +27,7 @@
 
 .storybook-card {
     box-shadow: 0px 12px 24px rgba(34, 34, 34, 0.12);
+    background-color: var(--white-bg);
     color: var(--neutral-800);
     overflow: hidden;
 }

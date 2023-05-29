@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import './button.css';
+import './button2.css';
 import { FaUser } from 'react-icons/fa';
 
 
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({ rounded, type, label, icon, disabled, ...props }) => {
+export const Button2 = ({ rounded, type, label, icon, disabled, ...props }) => {
     let border;
     if (rounded) {
-        border = "storybook-button-rounded";
+        border = "button2-rounded";
     }
     let mode;
     if (disabled) {
@@ -18,27 +18,17 @@ export const Button = ({ rounded, type, label, icon, disabled, ...props }) => {
     }
   
   return (
-    <button
-      type="button"
-      className={["storybook-button", border, mode, `${type}`].join(' ')}
-      {...props}
-    >
-        {/* {icon ? <div className="button-userIcon">
-            <i class="si si-cross"></i>
-        </div> : null} */}
-
-        {icon ? <div className="button-userIcon">
+    <div className={["button2", border, mode, `${type}`].join(' ')}>
+      {icon ? <div className="button-userIcon">
             <FaUser />
         </div> : null}
-        {/* {label} */}
-        <div className="button-label">{label}</div>
-        
-    </button>
 
+        <div className="button-label">{label}</div>
+    </div>
   );
 };
 
-Button.propTypes = {
+Button2.propTypes = {
   /**
    * Should the button be rounded?
    */
@@ -65,7 +55,7 @@ Button.propTypes = {
   onClick: PropTypes.func,
 };
 
-Button.defaultProps = {
+Button2.defaultProps = {
   rounded: false,
   label: 'null',
   icon: false,

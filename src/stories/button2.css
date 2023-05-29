@@ -22,7 +22,7 @@
     --semibold-font-weight: 600;
 }
 
-.storybook-button {
+.button2 {
     font-family: inherit;
     color: var(--neutral-50);
     border: 0;
@@ -30,17 +30,16 @@
     align-items: center;
     justify-content: center;
     grid-template-columns: auto auto;
-    
+    width: fit-content;
     cursor: pointer;
-    /* line-height: calc(1.5 * var(--base-font-size)); */
     padding: 8px 16px;    
 }
 
-.storybook-button:hover {
+.button2:hover {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
-.storybook-button:active {
+.button2:active {
     font-weight: var(--semibold-font-weight);
 }
 
@@ -60,7 +59,7 @@
      /* other sides handled by container */
 }
 
-.storybook-button-rounded {
+.button2-rounded {
     border-radius: 100px;
 }
 
