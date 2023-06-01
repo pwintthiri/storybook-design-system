@@ -1,12 +1,11 @@
-/* @font-face {
+@font-face {
     font-family: 'Proxima Nova';
-    src: url('../fonts/proximanova-regular.otf'),
-    url('../fonts//proximanova-semibold.otf'),
-    url('../fonts/sigvar_serial-regular.otf');
-} */
+    src: url('../assets/fonts/proximanova-regular.otf') format('opentype'),
+    url('../assets/fonts/proximanova-semibold.otf') format('opentype'),
+    url('../assets/fonts/sigvar_serial-regular.otf') format('opentype'),
+}
 
 :root {
-    font-family: 'Proxima Nova';
     --sia-blue: #002569;
     --secondary-700: #3B7FD2;
     --neutral-50: #FBFBFB;
@@ -57,6 +56,11 @@
     place-items: center;
     margin-right: 8px;
      /* other sides handled by container */
+}
+
+.si-cross {
+    background-image: url('./assets/icons/si-home.svg');
+  
 }
 
 .button2-rounded {

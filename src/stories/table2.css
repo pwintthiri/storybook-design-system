@@ -1,4 +1,10 @@
-/* card using flex */
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../assets/fonts/proximanova-regular.otf') format('opentype'),
+    url('../assets/fonts/proximanova-semibold.otf') format('opentype'),
+    url('../assets/fonts/sigvar_serial-regular.otf') format('opentype'),
+}
+
 :root {
     --sia-blue: #002569;
     --secondary-300: #75BCF7;
@@ -31,21 +37,19 @@
     border: 1px solid var(--neutral-200);
 }
 
-.header-row {
-    color: var(--white-bg);
-    background-color: var(--sia-blue);
-    font-size: var(--base-font-size);
-    line-height: calc(1.5*var(--base-font-size));
-    font-weight: var(--semibold-font-weight);
-    padding: 8px 12px;
-}
-
-.data-row {
-    background-color: var(--white-bg);
+.header-row, .data-row {
     font-size: var(--base-font-size);
     line-height: calc(1.5*var(--base-font-size));
     font-weight: var(--regular-font-weight);
     padding: 8px 12px;
+}
+.header-row {
+    color: var(--white-bg);
+    background-color: var(--sia-blue);
+}
+
+.data-row {
+    background-color: var(--white-bg);
 }
 
 @media screen and (max-width: 768px) {
@@ -70,6 +74,6 @@
 
     .table-lined .mini-table-content,
     .table-two-columns .mini-table-content {
-        border: 1px solid var(--neutral-200);
+        border-bottom: 1px solid var(--neutral-200);
     }
 }

@@ -59,7 +59,7 @@ export const Table2 = ({ type, numRows, numCols, ...props }) => {
       for (let c = 0; c < numCols; c++) {
         // push into cells entries for each mini table
         cells.push(
-          <div key={`${r},${c}`} className="mini-table-content" style={{gridTemplateColumns: `repeat(${numCols}, 1fr)`}}>
+          <div key={`${r},${c}`} className="mini-table-content" style={{gridTemplateColumns: "repeat(2, 1fr)"}}>
             <div className="header-row">{header[c]}</div>
             <div className="data-row">{data[(r * numCols) + c]}</div>
           </div>

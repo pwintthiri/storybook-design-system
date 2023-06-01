@@ -16,12 +16,8 @@
 
 .storybook-textinput {
     background-color: var(--white-bg);
-    /* display: grid; */
-    /* align-items: center; */
-    /* padding: 16px 0px; */
     max-width: fit-content;
     min-width: 300px;
-    /* grid-template-columns: auto auto auto; */
 }
 
 .storybook-textinput-filled, .storybook-textinput-lined, .storybook-textinput-outlined  {
@@ -106,7 +102,6 @@
     margin-left: auto;
     margin-right: 16px;
     cursor: pointer;
-    color: teal;
 }
 
 .input-wrapper {
@@ -116,7 +111,6 @@
 }
 
 .form-input {
-    /* font-family: inherit; */
     width: 100%;
     border: 0;
     border-bottom: 1px solid #d2d2d2;
@@ -140,8 +134,7 @@
 .form-input:placeholder-shown ~ .form-label {
     font-size: 16px;
     cursor: text;
-    top: 8px; 
-    /* position of Label placeholder */
+    top: 8px; /* position of Label placeholder */
 }
 
 label,

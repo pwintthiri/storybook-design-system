@@ -17,10 +17,11 @@ $white-bg: #FFFFFF;
 @font-face {
     font-family: 'Proxima Nova';
     src: url('../../fonts/proximanova-regular.otf') format('opentype'),
-    url('../../fonts/proximanova-semibold.otf') format('opentype');
+    url('../../fonts/proximanova-semibold.otf') format('opentype'),
+    url('../../fonts/sigvar_serial-regular.otf') format('opentype');
 }
 
-$fonts: 'Proxima Nova', 'Times New Roman','Helvetica Neue', Helvetica, Arial, sans-serif;
+$fonts: 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $base-font-size: 16px;
 $large-font-size: 24px;
 $icon-font-size: 24px;

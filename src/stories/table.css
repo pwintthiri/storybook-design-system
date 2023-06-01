@@ -1,4 +1,3 @@
-/* card using flex */
 :root {
     --sia-blue: #002569;
     --secondary-300: #75BCF7;
@@ -24,25 +23,21 @@
 .sia-table {
     width: var(--table-width);
     display: grid;
-    /* grid-gap: 10px; */
-    /* grid-template-columns: repeat(4, 1fr); */
 }
 
-.header-row {
-    color: var(--white-bg);
-    background-color: var(--sia-blue);
-    font-size: var(--base-font-size);
-    line-height: calc(1.5*var(--base-font-size));
-    font-weight: var(--semibold-font-weight);
-    padding: 8px 12px;
-}
-
-.data-row {
-    background-color: var(--white-bg);
+.header-row, .data-row {
     font-size: var(--base-font-size);
     line-height: calc(1.5*var(--base-font-size));
     font-weight: var(--regular-font-weight);
     padding: 8px 12px;
+}
+.header-row {
+    color: var(--white-bg);
+    background-color: var(--sia-blue);
+}
+
+.data-row {
+    background-color: var(--white-bg);
 }
 
 .table-lined .data-row,
@@ -53,10 +48,6 @@
 .sia-table.table-unlined {
     border: 1px solid var(--neutral-200);
 }
-/* 
-.sia-table.table-two-columns {
-    grid-template-columns: auto auto;
-} */
 
 /* tablet */
 @media screen and (max-width: 768px) {
