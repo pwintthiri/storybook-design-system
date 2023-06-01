@@ -4,13 +4,17 @@ import './App.css';
 import { Button } from './stories/Button'
 import { TextInput } from './stories/TextInput';
 import { Card } from './stories/Card'
+import { Table } from './stories/Table'
 
 
 function App() {
   return (
     <body>
       <div className="content">
-        <header></header>
+        <header>
+        <Table type="two-columns" entry='[{"Account": "Visa","Date": "10/10/2020"}, {"Account": "Master","Date": "08/10/2021"},{"Account": "Cirrus","Date": "07/10/2020"}]' />
+
+        </header>
         <div className="hero-section">
           Enter your details here:
           <p></p>

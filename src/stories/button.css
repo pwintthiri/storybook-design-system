@@ -1,9 +1,9 @@
-@font-face {
+/* @font-face {
     font-family: 'Proxima Nova';
     src: url('../fonts/proximanova-regular.otf'),
     url('../fonts//proximanova-semibold.otf'),
     url('../fonts/sigvar_serial-regular.otf');
-}
+} */
 
 :root {
     font-family: 'Proxima Nova';
@@ -58,6 +58,22 @@
     place-items: center;
     margin-right: 8px;
      /* other sides handled by container */
+}
+
+.si-cross {
+    background-image: url('./assets/icons/si-home.svg');
+  
+}
+
+.si{
+    display: inline-block;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    height: 1.5em;
+    width: 1.5em;
+    background: no-repeat;
+    vertical-align: middle;
 }
 
 .storybook-button-rounded {

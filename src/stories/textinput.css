@@ -1,9 +1,3 @@
-@font-face {
-    font-family: 'Proxima Nova';
-    src: url('../fonts/proximanova-regular.otf'),
-    url('../fonts//proximanova-semibold.otf'),
-    url('../fonts/sigvar_serial-regular.otf');
-}
 
 :root {
     font-family: 'Proxima Nova';

@@ -1,0 +1,69 @@
+@use '../abstracts/variables';
+@use '../base/base';
+
+
+.button2 {
+    color: variables.$neutral-50;
+    border: 0;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: auto auto;
+    width: fit-content;
+    cursor: pointer;
+    padding: 8px 16px; 
+    
+}
+
+.button2:hover {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.button2:active {
+    font-weight: variables.$semibold-font-weight;
+}
+
+.button-label {
+    font-size: variables.$base-font-size;
+    font-weight: variables.$regular-font-weight;
+    line-height: calc(1.5 * variables.$base-font-size);
+}
+
+.button-userIcon {
+    // font-size: variables.$icon-font-size;
+    width: variables.$icon-font-size;
+    height: variables.$icon-font-size;
+    display: grid;
+    place-items: center;
+    margin-right: 8px;
+     /* other sides handled by container */
+}
+
+.button2-rounded {
+    border-radius: 100px;
+}
+
+.primary {
+    background-color: variables.$sia-blue;
+}
+
+.secondary {
+    background-color: variables.$secondary-700;
+}
+
+.tertiary {
+    background-color: variables.$white-bg;
+    color: variables.$sia-blue;
+    border: 1px solid variables.$sia-blue;
+}
+
+.disabled-class {
+    background-color: variables.$neutral-400;
+    color: variables.$neutral-500;
+    pointer-events: none;
+}
+
+.disabled-class.tertiary {
+    background-color: transparent;
+    border-color:variables.$neutral-400;
+}

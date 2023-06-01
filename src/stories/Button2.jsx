@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import './button2.css';
+// import './_button2.css';
+import '../assets/scss/components/_button2.scss'
 import { FaUser } from 'react-icons/fa';
 
 

@@ -1,0 +1,31 @@
+// colors
+$sia-blue: #002569;
+$secondary-300: #75BCF7;
+$secondary-700: #3B7FD2;
+$neutral-50: #FBFBFB;
+$neutral-100: #F6F6F6;
+$neutral-200: #F1F1F1; /* check again */
+$neutral-400: #C3C3C3;
+$neutral-500: #A5A5A5;
+$neutral-600: #7B7B7B;
+$neutral-800: #484848;
+$neutral-700: #676767;
+$white-bg: #FFFFFF;
+
+
+// font
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../../fonts/proximanova-regular.otf') format('opentype'),
+    url('../../fonts/proximanova-semibold.otf') format('opentype');
+}
+
+$fonts: 'Proxima Nova', 'Times New Roman','Helvetica Neue', Helvetica, Arial, sans-serif;
+$base-font-size: 16px;
+$large-font-size: 24px;
+$icon-font-size: 24px;
+
+$regular-font-weight: 400;
+$semibold-font-weight: 600;
+
+$table-width: 640px;
